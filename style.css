@@ -8,15 +8,6 @@ section{
 #home{
     margin-top: 20px;
 }
-.about{
-    min-height: 100%;
-}
-.special{
-    min-height: 100%;
-}
-.reviews{
-    min-height: 100%;
-}
 .btn{
     color: white;
     background: rgb(52, 1, 100) ;
@@ -34,16 +25,15 @@ section{
     background: white;
     border: 1px solid rgb(52, 1, 100);
 }
-
 header{
     display: flex;
     justify-content: space-between;
-    position: fixed !important;;
+    position: fixed !important;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1);
     padding: 1.5rem 9%;
     top:0; left: 0; right:0;
     background:white;
-    z-index: 9999;
+	z-index: 9999!important;
 }
 header a{
     text-decoration: none;
@@ -134,6 +124,8 @@ header  a span{
     padding: 1rem;
 }
 
+
+
 @media(max-width:1024px){
     .navbar .links{
         width: 60%;
@@ -155,26 +147,21 @@ header  a span{
     width: 100%;
     margin-top: 50px;
     transform: translateX(100%);
-    transition: transform 0.5s ease-in;
+    transition: transform 0.9s ease-in;
     }
     .navbar a{
         margin-top: 50px;
     }
     #menu-bar{
         display: block;
-        padding-right: 6rem;
+        padding-right: 5rem;
     }
     section{
         padding: 0 80px 0 80px;
         margin-top: 60px;
     }
-    .col-2 img{
-        display: none;
-    }
-    .col-2 .color-box{
-        height: 80vh;
-        width: 55vw;
-        position: relative;
+    .col-2{
+      display: none;
     }
     .footer-links {
         display: flex!important;
@@ -195,5 +182,19 @@ header  a span{
 .toggle .line3{
     transform:rotate(45deg)translate(-10px,-8px);
 }
+
   
-   
+ 
+  
+[data-scroll] {
+	transition: all 2s!important;
+  }
+  [data-scroll="in"] {
+	opacity: 1!important;
+	transform: translateY(0)!important;
+  }
+  [data-scroll="out"] {
+	opacity: 0!important;
+	transform: translateY(100px)!important;
+  }
+
